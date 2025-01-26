@@ -1,0 +1,81 @@
+
+body {
+    Font-family: Arial, sans-serif;
+    Margin: 0;
+    Padding: 0;
+    Line-height: 1.6;
+    Background-color: #f4f4f4;
+    Color: #333;
+}
+
+header, main, footer {
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for better text visibility */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+Header {
+    Background: #333;
+    Color: #fff;
+    Padding: 10px 20px;
+    Text-align: center;
+}
+
+Header h1 {
+    Margin: 0;
+}
+
+Nav {
+    Margin-top: 10px;
+}
+
+Nav a {
+    Color: #fff;
+    Text-decoration: none;
+    Margin: 0 10px;
+}
+
+Main {
+    Padding: 20px;
+    Text-align: center;
+}
+
+Main img {
+    Border: 2px solid #333;
+    Border-radius: 5px;
+}
+
+Footer {
+    Text-align: center;
+    Padding: 10px;
+    Background: #333;
+    Color: #fff;
+    Position: fixed;
+    Bottom: 0;
+    Width: 100%;
+    background: linear-gradient(45deg, #4CAF50, #45a049); /* Green gradient */
+}
+
+.custom-button {
+    background-color: #4CAF50; /* Initial button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover/click effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center;
+}
+
+.custom-button:hover {
+    background-color: #05cf0f; /* Darker green on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
+}
+
+.custom-button:active {
+    background-color: #3e8e41; /* Even darker green on click */
+    transform: scale(0.98); /* Slightly shrink the button on click */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Smaller shadow on click */
+}
