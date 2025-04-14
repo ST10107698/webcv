@@ -1,83 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Website</title>
+    <title>Curriculum Vitae</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        /* Full-page centering */
-        body, html {
+        * {
             margin: 0;
             padding: 0;
-            height: fit-content;
-            display: flex; /* Flexbox for centering */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            background-image: url('images/ycolor.jpg'); /* Background image */
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif; /* Optional font styling */
-            color: #fff; /* Text color for readability */
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
-
-        /* Background blur */
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(10px); /* Creates the blur effect */
-            background-color: rgba(255, 255, 255, 0.2); /* Slight overlay for clarity */
-            z-index: -1; /* Keeps the background behind content */
-        }
-
-        /* Centered form container */
-        .form-container {
-            background: rgba(0, 26, 255, 0.8); /* Transparent blue */
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-            text-align: center; /* Center text inside the form */
-            width: fit-content; /* Fixed width for the form */
-        }
-
-        /* Buttons styling */
-        .custom-button {
-            background-color: #4CAF50; /* Green color */
+        
+        body {
+            background-color: #2F4F4F;
             color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
         }
 
-        .custom-button:hover {
-            background-color: #45a049; /* Darker green on hover */
+        /* Navigation Bar */
+        .navbar {
+            background: #1c3d3d;
+            padding: 50px;
+            text-align: center;
         }
 
-        /* Footer styling */
-        footer {
+        .navbar h1 {
+            font-size: 36px;
+            color: white;
+        }
+
+        .navbar nav {
             margin-top: 20px;
         }
 
-        footer hr {
-            border: 1px solid #fff;
+        .navbar nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .navbar nav a:hover {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        .navbar img {
+            width: 200px;
+            height: auto;
+            float: left;
+            padding-top: 0px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('images/hero.jpg') no-repeat center center/cover;
+            height: 100px;
+            padding-top: 5px;
+            display: flex;
+            justify-content: center;
+            color: #1c3d3d;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        h3 {
+            text-align: center;
+            padding: 10px;
+            margin: 0 15px;
+        }
+
+        /* Services Section */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .service-box {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            background: yellow;
+            color: black;
+        }
+
+        .service-box i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: yellow;
+        }
+
+        /* Booking Section */
+        .booking {
+            background: #444;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .booking form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .booking input, .booking select {
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .booking button {
+            padding: 12px;
+            background: yellow;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .booking button:hover {
+            background: white;
+            color: black;
+        }
+
+        /* Reviews */
+        .reviews {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .review {
+            background: #333;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #1c3d3d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer .icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer .icons a:hover {
+            color: #16a085;
         }
 
         footer a {
-            color: #fff;
+            color: white;
+            margin-top: 10px;
+            display: inline-block;
             text-decoration: none;
-            margin: 0 10px;
         }
 
         footer a:hover {
             text-decoration: underline;
         }
+
+        footer div {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        /*----------*/
+        ul {
+        list-style-type: none;
+        padding: 0;
+        max-width: 700px;
+        }
+
+        li {
+            background:#2F4F4F;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
     </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <img src="images/myPic.jpg" alt="Website Logo">
+        <h1>KUTLWANO LUCKY NTHUTANG'S <br>CURRICULUM VITAE DOCUMENTS</h1>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h3><strong>Name:</strong> Kutlwano Lucky Nthutang<br>
+        &nbsp;&nbsp;
+        <strong>Email:</strong> nthutangkutlwano7@gmail.com<br>
+        &nbsp;&nbsp;
+        <strong>Phone:</strong> +27 79 843 5825</h3>
+    </div>
+    
+    <div class="services">
+        
+        <div class="service-box" onclick="location.href='idCard.html'">
+            <i class="fas fa-tire"></i>
+            <h3>IDENTITY DOCUMENT</h3>
+        </div>
+        <div class="service-box" onclick="location.href='matricResult.html'">
+            <i class="fas fa-gas-pump"></i>
+            <h3>MATRIC CERTIFICATE</h3>
+        </div>
+        <div class="service-box" onclick="location.href='rcCertificate.html'">
+            <i class="fas fa-wind"></i>
+            <h3>ROSEBANK CERTIFICATE</h3>
+        </div>
+        <div class="service-box" onclick="location.href='bank.html'">
+            <i class="fas fa-car-battery"></i>
+            <h3>BANK STATEMENT</h3>
+        </div>
+        <div class="service-box" onclick="location.href='sarsNumber.html'">
+            <i class="fas fa-tools"></i>
+            <h3>SARS NUMBER</h3>
+        </div>
+
+    </div>
+
+    <footer>
+        <hr>
+        <p>&copy; 2025 Kutlwano Lucky Nthutang</p>
+        <p>
+            <p>
+                <a href="javascript:showContactNumber()">Contact</a>
+                <a href="mailto:nthutangkutlwano7@gmail.com">Email</a>
+            </p>
+        </p>
+    </footer>
 
     <script>
         function showContactNumber() {
@@ -85,36 +261,5 @@
         }
     </script>
 
-</head>
-<body>
-    <!--<div class="background"></div>-->
-    <div class="form-container">
-        <h1>Kutlwano Lucky Nthutang's <br/> Curriculum Vitae Documents</h1>
-        <h2>Personal Information</h2>
-        <p><strong>Name:</strong> Kutlwano Lucky Nthutang</p>
-        <p><strong>Email:</strong> nthutangkutlwano7@gmail.com</p>
-        <p><strong>Phone:</strong> +27 79 843 5825</p>
-        
-        <h2>Documents</h2>
-        <button class="custom-button" onclick="location.href='matricResult.html'">Matric Result</button>
-        <br/><br/>
-        <button class="custom-button" onclick="location.href='sarsNumber.html'">SARS Number</button>
-        <br/><br/>
-        <button class="custom-button" onclick="location.href='bank.html'">Bank Statement</button>
-        <br/><br/>
-        <button class="custom-button" onclick="location.href='idCard.html'">Identity DocumentD</button>
-        <br/><br/>
-        <button class="custom-button" onclick="location.href='rcCertificate.html'">Rosebank College Certificate</button>
-        <footer>
-            <hr>
-            <p>&copy; 2025 Kutlwano Lucky Nthutang</p>
-            <p>
-                <p>
-                    <a href="javascript:showContactNumber()">Contact</a>
-                    <a href="mailto:nthutangkutlwano7@gmail.com">Email</a>
-                </p>
-            </p>
-        </footer>
-    </div>
 </body>
 </html>

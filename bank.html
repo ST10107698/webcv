@@ -6,20 +6,19 @@
     <title>Bank Statement</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* Full-page centering */
-        body, html {
+        * {
             margin: 0;
             padding: 0;
-            height: fit-content;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #2F4F4F;
+            color: white;
             display: flex; /* Flexbox for centering */
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
-            background-image: url('images/ycolor.jpg'); /* Background image */
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif; /* Optional font styling */
-            color: #fff; /* Text color for readability */
         }
 
         /* Background blur */
@@ -36,7 +35,7 @@
 
         /* Centered form container */
         .form-container {
-            background: rgba(0, 26, 255, 0.8); /* Transparent blue */
+            background: transparent; /* Transparent blue */
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -90,9 +89,13 @@
     <div class="form-container">
         <br/><br/>
         <header>
-            <h1>ID Card</h1>
+            
+            <h1>Bank Statement</h1>
+            <br>
             <nav>
                 <button class="custom-button" onclick="location.href='index.html'">Back to home</button>
+                &nbsp;&nbsp;
+                <button class="custom-button" onclick="location.href='idCard.html'">ID Card</button>
                 &nbsp;&nbsp;
                 <button class="custom-button" onclick="location.href='matricResult.html'">Matric Result</button>
                 &nbsp;&nbsp;
@@ -102,14 +105,16 @@
                 &nbsp;&nbsp;
                 <button class="custom-button" onclick="location.href='sarsNumber.html'">SARS Number</button>
             </nav>
+            <br>
         </header>
         <main>
             <h2>View Bank Statement</h2>
+            <br>
             <img src="images/bankS.jpg" alt="ID Card" width="400">
         </main>
         <footer>
             <hr>
-            <p>&copy; 2025 Kutlwano Lucky Nthutang</p>
+            <p>&copy; 2025 Kutlwano Lucky Nthutang</p><br>
             <p>
                 <a href="javascript:showContactNumber()">Contact</a>
                 <a href="mailto:nthutangkutlwano7@gmail.com">Email</a>
